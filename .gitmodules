@@ -1,0 +1,3 @@
+[submodule "src/ros2_so_arm100"]
+	path = src/ros2_so_arm100
+	url = https://github.com/ros-physical-ai/ros2_so_arm.git

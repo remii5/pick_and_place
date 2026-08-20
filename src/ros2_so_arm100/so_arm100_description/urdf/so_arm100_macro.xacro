@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copied from
+SO-ARM100/Simulation/SO100/so100.urdf with minimal changes:
+- Meshes changed to package://so_arm100_description
+- Added parameters for prefix and material color
+- Added _link to link names and _joint to joint names
+- Update default positions and limits of some joints
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro
+    name="so_arm100"
+    params="
+      prefix
+      color:='1.0 0.82 0.12 1.0'
+      parent:=world
+      x:=0.0
+      y:=0.0
+      z:=0.0
+      roll:=0.0
+      pitch:=0.0
+      yaw:=0.0"
+  >
+    <!-- Materials -->
+    <material name="3d_printed">
+      <color rgba="${color}" />
+    </material>
+    <material name="sts3215">
+      <color rgba="0.1 0.1 0.1 1.0" />
+    </material>
+
+    <!-- Fixed joint from parent to base -->
+    <joint name="${prefix}${parent}_to_base_joint" type="fixed">
+      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}" />
+      <parent link="${parent}" />
+      <child link="${prefix}base_link" />
+    </joint>
+
+    <!-- Link base -->
+    <link name="${prefix}base_link">
+      <inertial>
+        <!-- Approximate inertial values -->
+        <mass value="1.0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://so_arm100_description/meshes/Base.stl" />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Base_Motor.stl"
+          />
+        </geometry>
+        <material name="sts3215" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://so_arm100_description/meshes/Base.stl" />
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Link shoulder -->
+    <link name="${prefix}shoulder_link">
+      <inertial>
+        <mass value="0.119226" />
+        <origin xyz="-9.07886e-05 0.0590972 0.031089" rpy="0 0 0" />
+        <inertia
+          ixx="5.94278e-05"
+          ixy="0"
+          ixz="0"
+          iyy="5.89975e-05"
+          iyz="0"
+          izz="3.13712e-05"
+        />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Rotation_Pitch.stl"
+          />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Rotation_Pitch_Motor.stl"
+          />
+        </geometry>
+        <material name="sts3215" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Rotation_Pitch.stl"
+          />
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Link upper_arm -->
+    <link name="${prefix}upper_arm_link">
+      <inertial>
+        <mass value="0.162409" />
+        <origin xyz="-1.72052e-05 0.0701802 0.00310545" rpy="0 0 0" />
+        <inertia
+          ixx="0.000213312"
+          ixy="0"
+          ixz="0"
+          iyy="0.000167164"
+          iyz="0"
+          izz="7.01522e-05"
+        />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Upper_Arm.stl"
+          />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Upper_Arm_Motor.stl"
+          />
+        </geometry>
+        <material name="sts3215" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Upper_Arm.stl"
+          />
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Link lower_arm -->
+    <link name="${prefix}lower_arm_link">
+      <inertial>
+        <mass value="0.147968" />
+        <origin xyz="-0.00339604 0.00137796 0.0768007" rpy="0 0 0" />
+        <inertia
+          ixx="0.000138803"
+          ixy="0"
+          ixz="0"
+          iyy="0.000107748"
+          iyz="0"
+          izz="4.84242e-05"
+        />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Lower_Arm.stl"
+          />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Lower_Arm_Motor.stl"
+          />
+        </geometry>
+        <material name="sts3215" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Lower_Arm.stl"
+          />
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Link wrist -->
+    <link name="${prefix}wrist_link">
+      <inertial>
+        <mass value="0.0661321" />
+        <origin xyz="-0.00852653 -0.0352279 -2.34622e-05" rpy="0 0 0" />
+        <inertia
+          ixx="3.45403e-05"
+          ixy="0"
+          ixz="0"
+          iyy="2.39041e-05"
+          iyz="0"
+          izz="1.94704e-05"
+        />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Wrist_Pitch_Roll.stl"
+          />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Wrist_Pitch_Roll_Motor.stl"
+          />
+        </geometry>
+        <material name="sts3215" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Wrist_Pitch_Roll.stl"
+          />
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Link gripper -->
+    <link name="${prefix}gripper_link">
+      <inertial>
+        <mass value="0.0929859" />
+        <origin xyz="0.00552377 -0.0280167 0.000483583" rpy="0 0 0" />
+        <inertia
+          ixx="5.03136e-05"
+          ixy="0"
+          ixz="0"
+          iyy="4.64098e-05"
+          iyz="0"
+          izz="2.72961e-05"
+        />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Fixed_Jaw.stl"
+          />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Fixed_Jaw_Motor.stl"
+          />
+        </geometry>
+        <material name="sts3215" />
+      </visual>
+    </link>
+
+    <!-- Link jaw -->
+    <link name="${prefix}jaw_link">
+      <inertial>
+        <mass value="0.0202444" />
+        <origin xyz="-0.00161745 -0.0303473 0.000449646" rpy="0 0 0" />
+        <inertia
+          ixx="1.11265e-05"
+          ixy="0"
+          ixz="0"
+          iyy="8.99651e-06"
+          iyz="0"
+          izz="2.99548e-06"
+        />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh
+            filename="package://so_arm100_description/meshes/Moving_Jaw.stl"
+          />
+        </geometry>
+        <material name="3d_printed" />
+      </visual>
+    </link>
+
+    <!-- Joint from base to shoulder -->
+    <joint name="${prefix}shoulder_pan_joint" type="revolute">
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}shoulder_link" />
+      <origin xyz="0 -0.0452 0.0165" rpy="1.57079 0 0" />
+      <axis xyz="0 -1 0" />
+      <limit lower="-2" upper="2" effort="35" velocity="1" />
+    </joint>
+
+    <transmission name="${prefix}shoulder_pan_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}shoulder_pan_joint">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor1">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!-- Joint from shoulder to upper_arm -->
+    <joint name="${prefix}shoulder_lift_joint" type="revolute">
+      <parent link="${prefix}shoulder_link" />
+      <child link="${prefix}upper_arm_link" />
+      <origin xyz="0 0.1025 0.0306" rpy="0 0 0" />
+      <axis xyz="1 0 0" />
+      <limit lower="-1.75" upper="1.75" effort="35" velocity="1" />
+    </joint>
+
+    <transmission name="${prefix}shoulder_lift_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}shoulder_lift_joint">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor2">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!-- Joint from upper_arm to lower_arm -->
+    <joint name="${prefix}elbow_flex_joint" type="revolute">
+      <parent link="${prefix}upper_arm_link" />
+      <child link="${prefix}lower_arm_link" />
+      <origin xyz="0 0.11257 0.028" rpy="0 0 0" />
+      <axis xyz="1 0 0" />
+      <limit lower="-1.575" upper="1.57" effort="35" velocity="1" />
+    </joint>
+
+    <transmission name="${prefix}elbow_flex_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}elbow_flex_joint">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor3">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!-- Joint from lower_arm to wrist -->
+    <joint name="${prefix}wrist_flex_joint" type="revolute">
+      <parent link="${prefix}lower_arm_link" />
+      <child link="${prefix}wrist_link" />
+      <origin xyz="0 0.0052 0.1349" rpy="0 0 0" />
+      <axis xyz="1 0 0" />
+      <limit lower="-3.5" upper="0.2" effort="35" velocity="1" />
+    </joint>
+
+    <transmission name="${prefix}wrist_flex_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}wrist_flex_joint">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor4">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!-- Joint from wrist to gripper -->
+    <joint name="${prefix}wrist_roll_joint" type="revolute">
+      <parent link="${prefix}wrist_link" />
+      <child link="${prefix}gripper_link" />
+      <origin xyz="0 -0.0601 0" rpy="0 0 0" />
+      <axis xyz="0 1 0" />
+      <limit lower="-1.0" upper="4.0" effort="35" velocity="1" />
+    </joint>
+
+    <transmission name="${prefix}wrist_roll_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}wrist_roll_joint">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor5">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <!-- Joint from gripper to jaw -->
+    <joint name="${prefix}gripper_joint" type="revolute">
+      <parent link="${prefix}gripper_link" />
+      <child link="${prefix}jaw_link" />
+      <origin xyz="-0.0202 -0.0244 0" rpy="0 3.14158 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="-0.2" upper="2.0" effort="35" velocity="1" />
+    </joint>
+
+    <transmission name="${prefix}gripper_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}gripper_joint">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor6">
+        <hardwareInterface>
+          hardware_interface/PositionJointInterface
+        </hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,150 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"feetech_driver/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 104,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 114,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 119,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "feetech_driver-core",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"feetech_driver/libserial_port.so.0.1.0",
+				"feetech_driver/libserial_port.so.0"
+			],
+			"targetId" : "serial_port::@734a2218608668bf7784",
+			"targetIndex" : 5,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "feetech_driver-core",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"feetech_driver/libserial_port.so"
+			],
+			"targetId" : "serial_port::@734a2218608668bf7784",
+			"targetIndex" : 5,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "feetech_driver-core",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"feetech_driver/libcommunication_protocol.so.0.1.0",
+				"feetech_driver/libcommunication_protocol.so.0"
+			],
+			"targetId" : "communication_protocol::@734a2218608668bf7784",
+			"targetIndex" : 1,
+			"targetInstallNamelink" : "skip",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "feetech_driver-core",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"feetech_driver/libcommunication_protocol.so"
+			],
+			"targetId" : "communication_protocol::@734a2218608668bf7784",
+			"targetIndex" : 1,
+			"targetInstallNamelink" : "only",
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"feetech_driver/demo"
+			],
+			"targetId" : "demo::@734a2218608668bf7784",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "feetech_driver-core",
+			"destination" : "lib/cmake/feetech_driver",
+			"paths" : 
+			[
+				"/home/remii/Projects/so-arm/build/feetech_ros2_driver/feetech_driver/feetech_driver-config.cmake",
+				"/home/remii/Projects/so-arm/build/feetech_ros2_driver/feetech_driver/feetech_driver-config-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "feetech_driver-core",
+			"destination" : "lib/cmake/feetech_driver",
+			"exportName" : "feetech_driver-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "serial_port::@734a2218608668bf7784",
+					"index" : 5
+				},
+				{
+					"id" : "communication_protocol::@734a2218608668bf7784",
+					"index" : 1
+				}
+			],
+			"paths" : 
+			[
+				"feetech_driver/CMakeFiles/Export/6caf001c0634c95883019e476cb78ef6/feetech_driver-targets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "feetech_driver",
+		"source" : "feetech_driver"
+	}
+}

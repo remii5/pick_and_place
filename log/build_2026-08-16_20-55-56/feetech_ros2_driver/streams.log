@@ -1,0 +1,32 @@
+[0.009s] Invoking command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/remii/Projects/so-arm/src/feetech_ros2_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/feetech_ros2_driver
+[0.025s] -- feetech_driver version: 0.1.0
+[0.028s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.191s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.200s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.223s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.231s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.241s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.253s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.309s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.311s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.365s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.428s] -- Found rclcpp_lifecycle: 28.1.21 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[0.460s] [31mCMake Error at CMakeLists.txt:34 (find_package):
+[0.460s]   By not providing "Findhardware_interface.cmake" in CMAKE_MODULE_PATH this
+[0.460s]   project has asked CMake to find a package configuration file provided by
+[0.461s]   "hardware_interface", but CMake did not find one.
+[0.461s] 
+[0.461s]   Could not find a package configuration file provided by
+[0.461s]   "hardware_interface" with any of the following names:
+[0.461s] 
+[0.461s]     hardware_interfaceConfig.cmake
+[0.461s]     hardware_interface-config.cmake
+[0.461s] 
+[0.461s]   Add the installation prefix of "hardware_interface" to CMAKE_PREFIX_PATH or
+[0.461s]   set "hardware_interface_DIR" to a directory containing one of the above
+[0.461s]   files.  If "hardware_interface" provides a separate development package or
+[0.461s]   SDK, be sure it has been installed.
+[0.461s] 
+[0.461s] [0m
+[0.461s] -- Configuring incomplete, errors occurred!
+[0.466s] Invoked command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/remii/Projects/so-arm/src/feetech_ros2_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/feetech_ros2_driver

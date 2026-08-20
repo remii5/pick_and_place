@@ -1,0 +1,1 @@
+/home/remii/Projects/so-arm/build/so_arm101_moveit_config/ament_cmake_environment_hooks/local_setup.bash

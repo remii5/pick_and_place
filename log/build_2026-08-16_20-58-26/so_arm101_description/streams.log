@@ -1,0 +1,65 @@
+[0.007s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm101_description': AMENT_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/lib:${LD_LIBRARY_PATH} PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/bin:${PATH} PYTHONPATH=/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm101_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/so_arm101_description
+[0.044s] -- The C compiler identification is GNU 13.3.0
+[0.085s] -- The CXX compiler identification is GNU 13.3.0
+[0.096s] -- Detecting C compiler ABI info
+[0.154s] -- Detecting C compiler ABI info - done
+[0.162s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.162s] -- Detecting C compile features
+[0.163s] -- Detecting C compile features - done
+[0.169s] -- Detecting CXX compiler ABI info
+[0.235s] -- Detecting CXX compiler ABI info - done
+[0.243s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.243s] -- Detecting CXX compile features
+[0.243s] -- Detecting CXX compile features - done
+[0.245s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.354s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.414s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.506s] -- Configuring done (0.5s)
+[0.508s] -- Generating done (0.0s)
+[0.509s] -- Build files have been written to: /home/remii/Projects/so-arm/build/so_arm101_description
+[0.513s] Invoked command in '/home/remii/Projects/so-arm/build/so_arm101_description' returned '0': AMENT_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/lib:${LD_LIBRARY_PATH} PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/bin:${PATH} PYTHONPATH=/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm101_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/so_arm101_description
+[0.513s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm101_description': AMENT_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/lib:${LD_LIBRARY_PATH} PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/bin:${PATH} PYTHONPATH=/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/remii/Projects/so-arm/build/so_arm101_description -- -j8 -l8
+[0.539s] Invoked command in '/home/remii/Projects/so-arm/build/so_arm101_description' returned '0': AMENT_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/lib:${LD_LIBRARY_PATH} PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/bin:${PATH} PYTHONPATH=/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/remii/Projects/so-arm/build/so_arm101_description -- -j8 -l8
+[0.540s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm101_description': AMENT_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/lib:${LD_LIBRARY_PATH} PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/bin:${PATH} PYTHONPATH=/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/remii/Projects/so-arm/build/so_arm101_description
+[0.545s] -- Install configuration: ""
+[0.545s] -- Execute custom install script
+[0.546s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/environment/so_arm101_description.dsv
+[0.552s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//urdf/so_arm101.urdf.xacro
+[0.557s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//urdf/so_arm101_macro.xacro
+[0.563s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//control/ros2_controllers.yaml
+[0.568s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//control/so_arm101.ros2_control.xacro
+[0.574s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/LICENSE
+[0.580s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/base_motor_holder_so101_v1.stl
+[0.586s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/base_so101_v2.stl
+[0.592s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/motor_holder_so101_base_v1.stl
+[0.597s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/motor_holder_so101_wrist_v1.stl
+[0.603s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/moving_jaw_so101_v1.stl
+[0.609s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/rotation_pitch_so101_v1.stl
+[0.614s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/sts3215_03a_no_horn_v1.stl
+[0.620s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/sts3215_03a_v1.stl
+[0.626s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/under_arm_so101_v1.stl
+[0.632s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/upper_arm_so101_v1.stl
+[0.637s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/waveshare_mounting_plate_so101_v2.stl
+[0.643s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/wrist_roll_follower_so101_v1.stl
+[0.649s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//meshes/wrist_roll_pitch_so101_v2.stl
+[0.655s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//mjcf/scene.xml
+[0.661s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//mjcf/so_arm101.xml
+[0.667s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//rviz/config.rviz
+[0.674s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//launch/controllers_bringup.launch.py
+[0.679s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description//launch/view_description.launch.py
+[0.685s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/ament_index/resource_index/package_run_dependencies/so_arm101_description
+[0.691s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/ament_index/resource_index/parent_prefix_path/so_arm101_description
+[0.697s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/environment/ament_prefix_path.sh
+[0.704s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/environment/ament_prefix_path.dsv
+[0.710s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/environment/path.sh
+[0.716s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/environment/path.dsv
+[0.721s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/local_setup.bash
+[0.728s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/local_setup.sh
+[0.733s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/local_setup.zsh
+[0.739s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/local_setup.dsv
+[0.746s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/package.dsv
+[0.752s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/ament_index/resource_index/packages/so_arm101_description
+[0.758s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/cmake/so_arm101_descriptionConfig.cmake
+[0.764s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/cmake/so_arm101_descriptionConfig-version.cmake
+[0.770s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm101_description/share/so_arm101_description/package.xml
+[0.784s] Invoked command in '/home/remii/Projects/so-arm/build/so_arm101_description' returned '0': AMENT_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/remii/Projects/so-arm/install/so_arm_utils:/home/remii/Projects/so-arm/install/feetech_ros2_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/lib:${LD_LIBRARY_PATH} PATH=/home/remii/Projects/so-arm/install/feetech_ros2_driver/bin:${PATH} PYTHONPATH=/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/remii/Projects/so-arm/build/so_arm101_description

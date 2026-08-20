@@ -1,0 +1,40 @@
+[0.007s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_utils -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/so_arm_utils
+[0.019s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.129s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.192s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.372s] -- Configuring done (0.4s)
+[0.376s] -- Generating done (0.0s)
+[0.378s] -- Build files have been written to: /home/remii/Projects/so-arm/build/so_arm_utils
+[0.380s] Invoked command in '/home/remii/Projects/so-arm/build/so_arm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_utils -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/so_arm_utils
+[0.381s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/so_arm_utils -- -j8 -l8
+[0.416s] Built target ament_cmake_python_symlink_so_arm_utils
+[0.596s] running install_scripts
+[0.599s] running egg_info
+[0.600s] creating so_arm_utils.egg-info
+[0.618s] writing so_arm_utils.egg-info/PKG-INFO
+[0.618s] writing dependency_links to so_arm_utils.egg-info/dependency_links.txt
+[0.618s] writing top-level names to so_arm_utils.egg-info/top_level.txt
+[0.619s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.633s] /usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[0.633s] !!
+[0.633s] 
+[0.633s]         ********************************************************************************
+[0.633s]         Please avoid running ``setup.py`` directly.
+[0.633s]         Instead, use pypa/build, pypa/installer or other
+[0.633s]         standards-based tools.
+[0.633s] 
+[0.633s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[0.634s]         ********************************************************************************
+[0.634s] 
+[0.634s] !!
+[0.634s]   self.initialize_options()
+[0.638s] running egg_info
+[0.672s] reading manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.672s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.674s] writing so_arm_utils.egg-info/PKG-INFO
+[0.675s] writing dependency_links to so_arm_utils.egg-info/dependency_links.txt
+[0.675s] writing top-level names to so_arm_utils.egg-info/top_level.txt
+[0.693s] Built target ament_cmake_python_build_so_arm_utils_egg
+[0.711s] reading manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.712s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.841s] Built target ament_cmake_python_build_so_arm_utils_scripts

@@ -1,0 +1,1 @@
+/home/remii/Projects/so-arm/src/feetech_ros2_driver/include/feetech_ros2_driver/joint_config.hpp

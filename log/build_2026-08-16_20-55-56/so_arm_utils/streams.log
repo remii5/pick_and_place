@@ -1,0 +1,30 @@
+[0.008s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/so_arm_utils -- -j8 -l8
+[0.044s] Built target ament_cmake_python_symlink_so_arm_utils
+[0.230s] running install_scripts
+[0.231s] running egg_info
+[0.250s] writing so_arm_utils.egg-info/PKG-INFO
+[0.250s] writing dependency_links to so_arm_utils.egg-info/dependency_links.txt
+[0.250s] writing top-level names to so_arm_utils.egg-info/top_level.txt
+[0.267s] /usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[0.267s] !!
+[0.267s] 
+[0.267s]         ********************************************************************************
+[0.267s]         Please avoid running ``setup.py`` directly.
+[0.267s]         Instead, use pypa/build, pypa/installer or other
+[0.267s]         standards-based tools.
+[0.267s] 
+[0.267s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[0.267s]         ********************************************************************************
+[0.267s] 
+[0.267s] !!
+[0.267s]   self.initialize_options()
+[0.272s] running egg_info
+[0.304s] reading manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.304s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.309s] writing so_arm_utils.egg-info/PKG-INFO
+[0.310s] writing dependency_links to so_arm_utils.egg-info/dependency_links.txt
+[0.310s] writing top-level names to so_arm_utils.egg-info/top_level.txt
+[0.325s] Built target ament_cmake_python_build_so_arm_utils_egg
+[0.347s] reading manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.347s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.468s] Built target ament_cmake_python_build_so_arm_utils_scripts

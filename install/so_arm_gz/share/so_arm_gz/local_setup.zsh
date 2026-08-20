@@ -1,0 +1,1 @@
+/home/remii/Projects/so-arm/build/so_arm_gz/ament_cmake_environment_hooks/local_setup.zsh

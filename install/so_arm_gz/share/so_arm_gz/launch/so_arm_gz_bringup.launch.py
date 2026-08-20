@@ -1,0 +1,1 @@
+/home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_gz/launch/so_arm_gz_bringup.launch.py

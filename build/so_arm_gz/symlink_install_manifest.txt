@@ -1,0 +1,16 @@
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/launch/so_arm_gz_bringup.launch.py
+/home/remii/Projects/so-arm/install/so_arm_gz/share/ament_index/resource_index/package_run_dependencies/so_arm_gz
+/home/remii/Projects/so-arm/install/so_arm_gz/share/ament_index/resource_index/parent_prefix_path/so_arm_gz
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/environment/ament_prefix_path.sh
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/environment/ament_prefix_path.dsv
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/environment/path.sh
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/environment/path.dsv
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/local_setup.bash
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/local_setup.sh
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/local_setup.zsh
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/local_setup.dsv
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/package.dsv
+/home/remii/Projects/so-arm/install/so_arm_gz/share/ament_index/resource_index/packages/so_arm_gz
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/cmake/so_arm_gzConfig.cmake
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/cmake/so_arm_gzConfig-version.cmake
+/home/remii/Projects/so-arm/install/so_arm_gz/share/so_arm_gz/package.xml

@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.000463] (feetech_ros2_driver) JobQueued: {'identifier': 'feetech_ros2_driver', 'dependencies': OrderedDict()}
+[0.000490] (so_arm_utils) JobQueued: {'identifier': 'so_arm_utils', 'dependencies': OrderedDict()}
+[0.000505] (so_arm100_description) JobQueued: {'identifier': 'so_arm100_description', 'dependencies': OrderedDict({'feetech_ros2_driver': '/home/remii/Projects/so-arm/install/feetech_ros2_driver', 'so_arm_utils': '/home/remii/Projects/so-arm/install/so_arm_utils'})}
+[0.000523] (so_arm101_description) JobQueued: {'identifier': 'so_arm101_description', 'dependencies': OrderedDict({'feetech_ros2_driver': '/home/remii/Projects/so-arm/install/feetech_ros2_driver', 'so_arm_utils': '/home/remii/Projects/so-arm/install/so_arm_utils'})}
+[0.000537] (so_arm100_moveit_config) JobQueued: {'identifier': 'so_arm100_moveit_config', 'dependencies': OrderedDict({'feetech_ros2_driver': '/home/remii/Projects/so-arm/install/feetech_ros2_driver', 'so_arm_utils': '/home/remii/Projects/so-arm/install/so_arm_utils', 'so_arm100_description': '/home/remii/Projects/so-arm/install/so_arm100_description'})}
+[0.000551] (so_arm_gz) JobQueued: {'identifier': 'so_arm_gz', 'dependencies': OrderedDict({'feetech_ros2_driver': '/home/remii/Projects/so-arm/install/feetech_ros2_driver', 'so_arm_utils': '/home/remii/Projects/so-arm/install/so_arm_utils', 'so_arm100_description': '/home/remii/Projects/so-arm/install/so_arm100_description', 'so_arm101_description': '/home/remii/Projects/so-arm/install/so_arm101_description'})}
+[0.000571] (feetech_ros2_driver) JobStarted: {'identifier': 'feetech_ros2_driver'}
+[0.003572] (so_arm_utils) JobStarted: {'identifier': 'so_arm_utils'}
+[0.005372] (feetech_ros2_driver) JobProgress: {'identifier': 'feetech_ros2_driver', 'progress': 'cmake'}
+[0.005737] (feetech_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/remii/Projects/so-arm/src/feetech_ros2_driver', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/feetech_ros2_driver'], 'cwd': '/home/remii/Projects/so-arm/build/feetech_ros2_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'remii', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'HOME': '/home/remii', 'OLDPWD': '/home/remii/Projects/so-arm/src', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2433', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'LOGNAME': 'remii', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'remii', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2375,unix/ubuntu:/tmp/.ICE-unix/2375', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba02816f_a271_4558_9c60_419ba256475e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.117', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/remii/Projects/so-arm/build/feetech_ros2_driver', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[0.008324] (so_arm_utils) JobProgress: {'identifier': 'so_arm_utils', 'progress': 'cmake'}
+[0.008793] (so_arm_utils) Command: {'cmd': ['/usr/bin/cmake', '/home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_utils', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/remii/Projects/so-arm/install/so_arm_utils'], 'cwd': '/home/remii/Projects/so-arm/build/so_arm_utils', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'remii', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'HOME': '/home/remii', 'OLDPWD': '/home/remii/Projects/so-arm/src', 'DESKTOP_SESSION': 'ubuntu', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2433', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'LOGNAME': 'remii', '_': '/usr/bin/colcon', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'remii', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/2375,unix/ubuntu:/tmp/.ICE-unix/2375', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/ba02816f_a271_4558_9c60_419ba256475e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.117', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/remii/Projects/so-arm/build/so_arm_utils', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600'}), 'shell': False}
+[0.100103] (-) TimerEvent: {}
+[0.200463] (-) TimerEvent: {}
+[0.213762] (so_arm_utils) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.214151] (feetech_ros2_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.300547] (-) TimerEvent: {}
+[0.347349] (so_arm_utils) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.347539] (feetech_ros2_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.365762] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.365985] (so_arm_utils) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400637] (-) TimerEvent: {}
+[0.459284] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.459473] (so_arm_utils) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.471717] (so_arm_utils) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.471943] (feetech_ros2_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.472256] (so_arm_utils) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.472421] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.473125] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.473335] (so_arm_utils) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.482261] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.482451] (so_arm_utils) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500755] (-) TimerEvent: {}
+[0.567803] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.568017] (so_arm_utils) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.576135] (so_arm_utils) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.576277] (feetech_ros2_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.576401] (so_arm_utils) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.576472] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.576762] (so_arm_utils) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.576903] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.582171] (feetech_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.584544] (so_arm_utils) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:4 (find_package):\n'}
+[0.584783] (so_arm_utils) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[0.584852] (so_arm_utils) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[0.584912] (so_arm_utils) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[0.584971] (so_arm_utils) StderrLine: {'line': b'\n'}
+[0.585029] (so_arm_utils) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[0.585087] (so_arm_utils) StderrLine: {'line': b'  any of the following names:\n'}
+[0.585144] (so_arm_utils) StderrLine: {'line': b'\n'}
+[0.585201] (so_arm_utils) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[0.585257] (so_arm_utils) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[0.585314] (so_arm_utils) StderrLine: {'line': b'\n'}
+[0.585370] (so_arm_utils) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[0.585426] (so_arm_utils) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[0.585575] (so_arm_utils) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[0.585644] (so_arm_utils) StderrLine: {'line': b'  has been installed.\n'}
+[0.585703] (so_arm_utils) StderrLine: {'line': b'\n'}
+[0.585760] (so_arm_utils) StderrLine: {'line': b'\x1b[0m\n'}
+[0.585816] (so_arm_utils) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.587236] (so_arm_utils) CommandEnded: {'returncode': 1}
+[0.600842] (-) TimerEvent: {}
+[0.601679] (so_arm_utils) JobEnded: {'identifier': 'so_arm_utils', 'rc': 1}
+[0.646241] (feetech_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.647195] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.652639] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") \n'}
+[0.653153] (feetech_ros2_driver) StdoutLine: {'line': b"-- Checking for module 'libserial'\n"}
+[0.659059] (feetech_ros2_driver) StdoutLine: {'line': b'--   Found libserial, version 1.0.0\n'}
+[0.678027] (feetech_ros2_driver) StdoutLine: {'line': b'-- feetech_driver version: 0.1.0\n'}
+[0.690801] (feetech_ros2_driver) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:28 (find_package):\n'}
+[0.690958] (feetech_ros2_driver) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[0.691122] (feetech_ros2_driver) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[0.691202] (feetech_ros2_driver) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[0.691273] (feetech_ros2_driver) StderrLine: {'line': b'\n'}
+[0.691343] (feetech_ros2_driver) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[0.691411] (feetech_ros2_driver) StderrLine: {'line': b'  any of the following names:\n'}
+[0.691490] (feetech_ros2_driver) StderrLine: {'line': b'\n'}
+[0.691558] (feetech_ros2_driver) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[0.691624] (feetech_ros2_driver) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[0.691690] (feetech_ros2_driver) StderrLine: {'line': b'\n'}
+[0.691756] (feetech_ros2_driver) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[0.691830] (feetech_ros2_driver) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[0.691897] (feetech_ros2_driver) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[0.691963] (feetech_ros2_driver) StderrLine: {'line': b'  has been installed.\n'}
+[0.692029] (feetech_ros2_driver) StderrLine: {'line': b'\n'}
+[0.692095] (feetech_ros2_driver) StderrLine: {'line': b'\x1b[0m\n'}
+[0.692160] (feetech_ros2_driver) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.695113] (feetech_ros2_driver) JobEnded: {'identifier': 'feetech_ros2_driver', 'rc': 'SIGINT'}
+[0.700996] (-) TimerEvent: {}
+[0.705521] (so_arm100_description) JobSkipped: {'identifier': 'so_arm100_description'}
+[0.705607] (so_arm101_description) JobSkipped: {'identifier': 'so_arm101_description'}
+[0.705686] (so_arm100_moveit_config) JobSkipped: {'identifier': 'so_arm100_moveit_config'}
+[0.705709] (so_arm_gz) JobSkipped: {'identifier': 'so_arm_gz'}
+[0.705724] (-) EventReactorShutdown: {}

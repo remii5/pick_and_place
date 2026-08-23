@@ -315,8 +315,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "DESTINATION" "share/so_arm_gz")
-ament_cmake_symlink_install_directory("/home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_gz" DIRECTORY "launch" "DESTINATION" "share/so_arm_gz")
+# install(DIRECTORY "launch" "camera" "worlds" "DESTINATION" "share/so_arm_gz")
+ament_cmake_symlink_install_directory("/home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_gz" DIRECTORY "launch" "camera" "worlds" "DESTINATION" "share/so_arm_gz")
 
 # install(FILES "/home/remii/Projects/so-arm/build/so_arm_gz/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/so_arm_gz" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/remii/Projects/so-arm/src/ros2_so_arm100/so_arm_gz" FILES "/home/remii/Projects/so-arm/build/so_arm_gz/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/so_arm_gz" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -190,6 +190,7 @@ def launch_setup(context, *args, **kwargs):
         ],
     )
 
+    world_file = PathJoinSubstitution([FindPackageShare("so_arm_gz"), "worlds", "camera_world.sdf"])
     gz_launch_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [FindPackageShare("ros_gz_sim"), "/launch/gz_sim.launch.py"]
@@ -199,11 +200,11 @@ def launch_setup(context, *args, **kwargs):
                 gazebo_gui,
                 if_value=[
                     " -r -v 4 --physics-engine gz-physics-bullet-featherstone-plugin ",
-                    "empty.sdf",
+                    world_file,
                 ],
                 else_value=[
                     " -s -r -v 4 --physics-engine gz-physics-bullet-featherstone-plugin ",
-                    "empty.sdf",
+                    world_file,
                 ],
             )
         }.items(),

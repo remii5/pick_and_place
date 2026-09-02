@@ -1,4 +1,0 @@
-Invoking command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/feetech_ros2_driver -- -j8 -l8
-Invoked command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/feetech_ros2_driver -- -j8 -l8
-Invoking command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/remii/Projects/so-arm/build/feetech_ros2_driver
-Invoked command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/remii/Projects/so-arm/build/feetech_ros2_driver

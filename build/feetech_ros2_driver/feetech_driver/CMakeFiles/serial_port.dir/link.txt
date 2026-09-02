@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -shared -Wl,-soname,libserial_port.so.0 -o libserial_port.so.0.1.0 CMakeFiles/serial_port.dir/src/serial_port.cpp.o  /usr/lib/x86_64-linux-gnu/libspdlog.so.1.12.0 -lserial /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0 

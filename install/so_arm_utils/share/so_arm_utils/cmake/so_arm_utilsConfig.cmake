@@ -1,1 +1,0 @@
-/home/remii/Projects/so-arm/build/so_arm_utils/ament_cmake_core/so_arm_utilsConfig.cmake

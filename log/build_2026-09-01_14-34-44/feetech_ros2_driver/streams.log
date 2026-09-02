@@ -1,0 +1,49 @@
+[0.018s] Invoking command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/feetech_ros2_driver -- -j8 -l8
+[0.090s] [ 11%] Built target ament_generate_version_header__feetech_ros2_driver
+[0.102s] [ 33%] Built target serial_port
+[0.122s] [ 55%] Built target communication_protocol
+[0.140s] [ 77%] Built target demo
+[0.156s] [100%] Built target feetech_ros2_driver
+[0.220s] Invoked command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/feetech_ros2_driver -- -j8 -l8
+[0.227s] Invoking command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/remii/Projects/so-arm/build/feetech_ros2_driver
+[0.234s] -- Install configuration: ""
+[0.236s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libserial_port.so.0.1.0
+[0.237s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libserial_port.so.0
+[0.237s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libserial_port.so
+[0.237s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0.1.0
+[0.237s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0
+[0.237s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libcommunication_protocol.so
+[0.238s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/bin/demo
+[0.238s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-config.cmake
+[0.238s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-config-version.cmake
+[0.238s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-targets.cmake
+[0.238s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-targets-noconfig.cmake
+[0.238s] -- Execute custom install script
+[0.239s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver//feetech_ros2_control_plugin_description.xml
+[0.240s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/feetech_ros2_driver.hpp
+[0.240s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/joint_config.hpp
+[0.241s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/library_path.sh
+[0.241s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/library_path.dsv
+[0.241s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/version.hpp
+[0.242s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/ament_index/resource_index/package_run_dependencies/feetech_ros2_driver
+[0.242s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/ament_index/resource_index/parent_prefix_path/feetech_ros2_driver
+[0.242s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/ament_prefix_path.sh
+[0.242s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/ament_prefix_path.dsv
+[0.242s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/path.sh
+[0.242s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/path.dsv
+[0.243s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.bash
+[0.243s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.sh
+[0.243s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.zsh
+[0.243s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.dsv
+[0.243s] -- Symlinking: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/package.dsv
+[0.251s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/ament_index/resource_index/packages/feetech_ros2_driver
+[0.251s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/feetech_ros2_driver
+[0.251s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/ament_cmake_export_targets-extras.cmake
+[0.251s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.251s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverConfig.cmake
+[0.251s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverConfig-version.cmake
+[0.252s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/package.xml
+[0.252s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/lib/libfeetech_ros2_driver.so
+[0.252s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverTargetsExport.cmake
+[0.252s] -- Up-to-date: /home/remii/Projects/so-arm/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverTargetsExport-noconfig.cmake
+[0.253s] Invoked command in '/home/remii/Projects/so-arm/build/feetech_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/remii/Projects/so-arm/build/feetech_ros2_driver

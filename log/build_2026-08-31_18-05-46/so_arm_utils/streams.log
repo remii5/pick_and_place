@@ -1,0 +1,60 @@
+[0.010s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/so_arm_utils -- -j8 -l8
+[0.061s] Built target ament_cmake_python_symlink_so_arm_utils
+[0.258s] running install_scripts
+[0.259s] running egg_info
+[0.278s] writing so_arm_utils.egg-info/PKG-INFO
+[0.278s] writing dependency_links to so_arm_utils.egg-info/dependency_links.txt
+[0.278s] writing top-level names to so_arm_utils.egg-info/top_level.txt
+[0.296s] /usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[0.296s] !!
+[0.297s] 
+[0.297s]         ********************************************************************************
+[0.297s]         Please avoid running ``setup.py`` directly.
+[0.297s]         Instead, use pypa/build, pypa/installer or other
+[0.297s]         standards-based tools.
+[0.297s] 
+[0.297s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[0.297s]         ********************************************************************************
+[0.297s] 
+[0.297s] !!
+[0.297s]   self.initialize_options()
+[0.302s] running egg_info
+[0.335s] reading manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.335s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.342s] writing so_arm_utils.egg-info/PKG-INFO
+[0.342s] writing dependency_links to so_arm_utils.egg-info/dependency_links.txt
+[0.342s] writing top-level names to so_arm_utils.egg-info/top_level.txt
+[0.355s] Built target ament_cmake_python_build_so_arm_utils_egg
+[0.381s] reading manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.382s] writing manifest file 'so_arm_utils.egg-info/SOURCES.txt'
+[0.555s] Built target ament_cmake_python_build_so_arm_utils_scripts
+[0.562s] Invoked command in '/home/remii/Projects/so-arm/build/so_arm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/remii/Projects/so-arm/build/so_arm_utils -- -j8 -l8
+[0.563s] Invoking command in '/home/remii/Projects/so-arm/build/so_arm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/remii/Projects/so-arm/build/so_arm_utils
+[0.569s] -- Install configuration: ""
+[0.569s] -- Execute custom install script
+[0.570s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/environment/pythonpath.sh
+[0.570s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/environment/pythonpath.dsv
+[0.570s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils-0.0.0-py3.12.egg-info/PKG-INFO
+[0.571s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.571s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.572s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils-0.0.0-py3.12.egg-info/top_level.txt
+[0.572s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils/__init__.py
+[0.573s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils/constants.py
+[0.573s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils/launch_utils.py
+[0.573s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/ament_index/resource_index/package_run_dependencies/so_arm_utils
+[0.574s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/ament_index/resource_index/parent_prefix_path/so_arm_utils
+[0.575s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/environment/ament_prefix_path.sh
+[0.575s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/environment/ament_prefix_path.dsv
+[0.575s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/environment/path.sh
+[0.575s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/environment/path.dsv
+[0.575s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/local_setup.bash
+[0.576s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/local_setup.sh
+[0.576s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/local_setup.zsh
+[0.576s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/local_setup.dsv
+[0.576s] -- Symlinking: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/package.dsv
+[0.582s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/ament_index/resource_index/packages/so_arm_utils
+[0.583s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/cmake/so_arm_utilsConfig.cmake
+[0.583s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/cmake/so_arm_utilsConfig-version.cmake
+[0.584s] -- Up-to-date symlink: /home/remii/Projects/so-arm/install/so_arm_utils/share/so_arm_utils/package.xml
+[0.611s] Listing '/home/remii/Projects/so-arm/install/so_arm_utils/lib/python3.12/site-packages/so_arm_utils'...
+[0.617s] Invoked command in '/home/remii/Projects/so-arm/build/so_arm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/remii/Projects/so-arm/build/so_arm_utils

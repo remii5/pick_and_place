@@ -1,0 +1,2 @@
+[console_scripts]
+camera_listener = so_arm_perception.camera_listener:main

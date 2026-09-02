@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing so_arm_perception.egg-info/PKG-INFO
+writing dependency_links to so_arm_perception.egg-info/dependency_links.txt
+writing entry points to so_arm_perception.egg-info/entry_points.txt
+writing requirements to so_arm_perception.egg-info/requires.txt
+writing top-level names to so_arm_perception.egg-info/top_level.txt
+reading manifest file 'so_arm_perception.egg-info/SOURCES.txt'
+writing manifest file 'so_arm_perception.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/remii/Projects/so-arm/install/so_arm_perception/lib/python3.12/site-packages/so-arm-perception.egg-link (link to .)
+Installing camera_listener script to /home/remii/Projects/so-arm/install/so_arm_perception/lib/so_arm_perception
+
+Installed /home/remii/Projects/so-arm/build/so_arm_perception
+running symlink_data

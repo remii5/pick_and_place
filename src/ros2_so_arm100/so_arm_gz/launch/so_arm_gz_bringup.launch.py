@@ -38,6 +38,14 @@ def launch_setup(context, *args, **kwargs):
     roll = LaunchConfiguration("roll")
     pitch = LaunchConfiguration("pitch")
     yaw = LaunchConfiguration("yaw")
+    world = LaunchConfiguration("world")
+    spawn_camera = LaunchConfiguration("spawn_camera")
+    camera_x = LaunchConfiguration("camera_x")
+    camera_y = LaunchConfiguration("camera_y")
+    camera_z = LaunchConfiguration("camera_z")
+    camera_roll = LaunchConfiguration("camera_roll")
+    camera_pitch = LaunchConfiguration("camera_pitch")
+    camera_yaw = LaunchConfiguration("camera_yaw")
 
     # Perform substitutions to get actual values
     arm_id_str = arm_id.perform(context)
@@ -175,6 +183,17 @@ def launch_setup(context, *args, **kwargs):
         condition=UnlessCondition(activate_joint_controller),
     )
 
+    world_file = PathJoinSubstitution([FindPackageShare("so_arm_gz"), "worlds", world])
+
+    camera_description_content = Command(
+        [
+            PathJoinSubstitution([FindExecutable(name="xacro")]),
+            " ",
+            PathJoinSubstitution([FindPackageShare("so_arm_gz"), "camera", "camera.xacro"]),
+
+        ]
+    )
+    
     # GZ nodes
     gz_spawn_entity = Node(
         package="ros_gz_sim",
@@ -190,7 +209,33 @@ def launch_setup(context, *args, **kwargs):
         ],
     )
 
-    world_file = PathJoinSubstitution([FindPackageShare("so_arm_gz"), "worlds", "camera_world.sdf"])
+    gz_spawn_camera = Node(
+        package = "ros_gz_sim",
+        executable = "create",
+        output = "screen",
+        arguments = [
+            "-string",
+            camera_description_content,
+            "-name",
+            "fixed_camera",
+            "-allow_renaming",
+            "true",
+            "-x",
+            camera_x,
+            "-y",
+            camera_y,
+            "-z",
+            camera_z,
+            "-R",
+            camera_roll,
+            "-P",
+            camera_pitch,
+            "-Y",
+            camera_yaw,
+        ],
+        condition=IfCondition(spawn_camera),
+    )
+
     gz_launch_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [FindPackageShare("ros_gz_sim"), "/launch/gz_sim.launch.py"]
@@ -210,12 +255,16 @@ def launch_setup(context, *args, **kwargs):
         }.items(),
     )
 
-    # Make the /clock topic available in ROS
+    # Make the /clock and camera topics available in ROS
     gz_sim_bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
         arguments=[
             "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
+            "/camera/image@sensor_msgs/msg/Image[gz.msgs.Image",
+            "/camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image",
+            "/camera/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked",
+            "/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo",
         ],
         output="screen",
     )
@@ -227,6 +276,7 @@ def launch_setup(context, *args, **kwargs):
         initial_joint_controller_spawner_stopped,
         initial_joint_controller_spawner_started,
         gz_spawn_entity,
+        gz_spawn_camera,
         gz_launch_description,
         gz_sim_bridge,
     ]
@@ -305,6 +355,62 @@ def generate_launch_description():
             "rviz_config_file",
             default_value="",
             description="Rviz config file (absolute path) to use when launching rviz. If empty, uses {arm_id}_description/rviz/config.rviz",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "world",
+            default_value="camera_world.sdf",
+            description="World file, found under so_arm_gz/worlds/",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "spawn_camera",
+            default_value = "true",
+            description = "Whether to spawn the fixed external camera into the world",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "camera_x",
+            default_value = "0.6",
+            description = "Camera spawn X pos",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "camera_y",
+            default_value = "0.0",
+            description = "Camera spawn Y pos",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "camera_z",
+            default_value = "0.8",
+            description = "Camera spawn Z pos",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "camera_roll",
+            default_value = "0.0",
+            description = "Camera spawn roll orientation (radians)",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "camera_pitch",
+            default_value = "0.3",
+            description = "Camera spawn pitch orientation (radians)",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "camera_yaw",
+            default_value = "3.14159",
+            description = "Camera spawn yaw orientation (radians)",
         )
     )
     declared_arguments.append(

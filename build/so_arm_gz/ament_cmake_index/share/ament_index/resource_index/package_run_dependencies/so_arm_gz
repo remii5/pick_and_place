@@ -1,1 +1,1 @@
-gz_sim_vendor;ros_gz_sim;so_arm100_description;so_arm101_description;xacro
+gz_sim_vendor;ros_gz_sim;ros_gz_bridge;ros_gz_image;so_arm100_description;so_arm101_description;xacro

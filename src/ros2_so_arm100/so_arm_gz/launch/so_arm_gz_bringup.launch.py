@@ -402,7 +402,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "camera_pitch",
-            default_value = "0.3",
+            default_value = "1.5708",
             description = "Camera spawn pitch orientation (radians)",
         )
     )

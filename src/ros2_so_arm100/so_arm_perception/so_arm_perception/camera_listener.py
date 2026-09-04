@@ -1,3 +1,5 @@
+import os
+
 import rclpy
 import cv2 as cv
 
@@ -9,8 +11,13 @@ class CameraSubscriber(Node):
     def __init__(self):
         super().__init__('camera_subscriber')
         self.bridge = CvBridge()
-        self.saved = False
+
         self.colors = {'red': [((0, 50, 50), (20, 255, 255)), ((170, 50, 50), (180, 255, 255)),], 'blue': [((90, 50, 50), (120, 255, 255))], 'green': [((30, 50, 50), (70, 255, 255))]}
+        self.saved = False
+        self.last_contours_pos = {}
+
+        self.output_dir = os.path.expanduser("~/Projects/so-arm/vision_results")
+
         self.subscription = self.create_subscription(Image, '/camera/image', self.listener_callback, 10)
         # prevent unused variable warning
         self.subscription
@@ -34,7 +41,7 @@ class CameraSubscriber(Node):
                 color_masks[key] = final_mask
 
         #min_area =  (approx)(real_cube_size_m * camera_focal_len_px) / some distance d
-        min_area = 500
+        min_area = 300
         for key in color_masks:
             contours, _ = cv.findContours(color_masks[key], cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
             for i in range(0, len(contours)):
@@ -50,17 +57,16 @@ class CameraSubscriber(Node):
 
         
         if not self.saved:
-            cv.imwrite("learning.png", im)
+            cv.imwrite(os.path.join(self.output_dir, "learning.png"), im)
             for key in color_masks:
-                cv.imwrite(f"mask_{key}.png", color_masks[key])
+                cv.imwrite(os.path.join(self.output_dir, f"mask_{key}.png"), color_masks[key])
             self.saved = True
-
+            self.get_logger().info(f'Hearing: height: "{msg.height}",  width: "{msg.width}", type:  "{msg.encoding}"')
         
-        self.get_logger().info(f'Hearing: height: "{msg.height}",  width: "{msg.width}", type:  "{msg.encoding}"')
-
+        
         for key in contours_pos:
             for i, (cx, cy) in enumerate(contours_pos[key]):
-                self.get_logger().info(f'{key} cube {i}: cx={cx},  cy={cy}')
+                self.get_logger().info(f'{key} cube {i}: cx={cx},  cy={cy}', throttle_duration_sec = 10.0)
 
 def main(args=None):
     rclpy.init(args=args)

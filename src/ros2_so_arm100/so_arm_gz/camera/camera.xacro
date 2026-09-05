@@ -45,7 +45,7 @@
       <visualize>true</visualize>
       <update_rate>10</update_rate>
       <topic>camera</topic>
-      <gz_frame_id>camera_optical_link</gz_frame_id>
+      <gz_frame_id>camera_link</gz_frame_id>
       <camera>
         <horizontal_fov>1.089</horizontal_fov>
         <image>

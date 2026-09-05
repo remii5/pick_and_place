@@ -2,10 +2,12 @@ import os
 
 import rclpy
 import cv2 as cv
+from message_filters import Subscriber, ApproximateTimeSynchronizer
 
 from rclpy.node import Node
 from cv_bridge import CvBridge
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image, PointCloud2
+from sensor_msgs_py import point_cloud2
 
 class CameraSubscriber(Node):
     def __init__(self):
@@ -14,16 +16,17 @@ class CameraSubscriber(Node):
 
         self.colors = {'red': [((0, 50, 50), (20, 255, 255)), ((170, 50, 50), (180, 255, 255)),], 'blue': [((90, 50, 50), (120, 255, 255))], 'green': [((30, 50, 50), (70, 255, 255))]}
         self.saved = False
-        self.last_contours_pos = {}
 
         self.output_dir = os.path.expanduser("~/Projects/so-arm/vision_results")
 
-        self.subscription = self.create_subscription(Image, '/camera/image', self.listener_callback, 10)
-        # prevent unused variable warning
-        self.subscription
+        self.im_sub = Subscriber(self, Image, 'camera/image')
+        self.pt_sub = Subscriber(self, PointCloud2, 'camera/points')
 
-    def listener_callback(self, msg):
-        im = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
+        self.sync = ApproximateTimeSynchronizer([self.im_sub, self.pt_sub], queue_size = 10, slop = 0.1)
+        self.sync.registerCallback(self.sync_callback)
+
+    def sync_callback(self, im_msg, pc_msg):
+        im = self.bridge.imgmsg_to_cv2(im_msg, desired_encoding="bgr8")
         
         im_HSV = cv.cvtColor(im, cv.COLOR_BGR2HSV)
         color_masks = {}
@@ -42,6 +45,7 @@ class CameraSubscriber(Node):
 
         #min_area =  (approx)(real_cube_size_m * camera_focal_len_px) / some distance d
         min_area = 300
+        #dict list of 2d points for all cubes keyed by color
         for key in color_masks:
             contours, _ = cv.findContours(color_masks[key], cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
             for i in range(0, len(contours)):
@@ -61,12 +65,32 @@ class CameraSubscriber(Node):
             for key in color_masks:
                 cv.imwrite(os.path.join(self.output_dir, f"mask_{key}.png"), color_masks[key])
             self.saved = True
-            self.get_logger().info(f'Hearing: height: "{msg.height}",  width: "{msg.width}", type:  "{msg.encoding}"')
-        
-        
+            self.get_logger().info(f'Hearing: height: "{im_msg.height}",  width: "{im_msg.width}", type:  "{im_msg.encoding}"')
+
+        #dict list of 3d coordinates, keyed by color
+        pc_pos={}
+        uv_list = []
+        lookup = []
+
         for key in contours_pos:
             for i, (cx, cy) in enumerate(contours_pos[key]):
-                self.get_logger().info(f'{key} cube {i}: cx={cx},  cy={cy}', throttle_duration_sec = 10.0)
+                self.get_logger().info(f'{key} cube {i}: cx={cx},  cy={cy}', throttle_duration_sec = 2.0)
+                uv_list.append(cy * pc_msg.width + cx)
+                lookup.append((key, i))
+                
+        points = list(point_cloud2.read_points(pc_msg, field_names=("x", "y", "z"), skip_nans=True, uvs=uv_list))
+                
+        for (key, i), pt in zip(lookup, points):
+            #skip if lookup points to NaN
+            if any(v != v for v in (pt['x'], pt['y'], pt['z'])):
+                continue
+            pc_pos.setdefault(key, [])
+            pc_pos[key].append((pt['x'], pt['y'], pt['z']))
+            self.get_logger().info(f'{key} cube {i}: pt.x={pt["x"]}, pt.y={pt["y"]}, pt.z={pt["z"]}', throttle_duration_sec = 2.0)
+    
+        
+        self.get_logger().info(f'Hearing from PointCloud2: height: "{pc_msg.height}",  width: "{pc_msg.width}"', throttle_duration_sec = 2.0)
+
 
 def main(args=None):
     rclpy.init(args=args)

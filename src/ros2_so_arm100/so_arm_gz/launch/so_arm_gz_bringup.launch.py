@@ -236,6 +236,38 @@ def launch_setup(context, *args, **kwargs):
         condition=IfCondition(spawn_camera),
     )
 
+    static_tf_world_to_camera = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        arguments=[
+            "--x", camera_x,
+            "--y", camera_y,
+            "--z", camera_z,
+            "--roll", camera_roll,
+            "--pitch", camera_pitch,
+            "--yaw", camera_yaw,
+            "--frame-id", "world",
+            "--child-frame-id", "camera_link",
+        ],
+        parameters=[{"use_sim_time": True}],
+        condition=IfCondition(spawn_camera),
+    )
+
+    static_tf_camera_to_optical = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        arguments=[
+            "--x", "0", "--y", "0", "--z", "0",
+            "--roll", "-1.5707963267948966",
+            "--pitch", "0",
+            "--yaw", "-1.5707963267948966",
+            "--frame-id", "camera_link",
+            "--child-frame-id", "camera_optical_link",
+        ],
+        parameters=[{"use_sim_time": True}],
+        condition=IfCondition(spawn_camera),
+    )
+
     gz_launch_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             [FindPackageShare("ros_gz_sim"), "/launch/gz_sim.launch.py"]
@@ -279,9 +311,12 @@ def launch_setup(context, *args, **kwargs):
         gz_spawn_camera,
         gz_launch_description,
         gz_sim_bridge,
+        static_tf_world_to_camera,
+        static_tf_camera_to_optical,
     ]
 
     return nodes_to_start
+
 
 
 def generate_launch_description():
